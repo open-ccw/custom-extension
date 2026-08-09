@@ -1,5 +1,5 @@
-import Cast from '../utils/cast.js'
-import Color from '../utils/color.js'
+import Cast from '../../utils/cast.js'
+import Color from '../../utils/color.js'
 // import cover from './assets/icon.svg'
 // import icon from './assets/icon.svg'
 //鸣谢：-6 优化代码和修复了一些 bug；_30 提供了部分拓展积木

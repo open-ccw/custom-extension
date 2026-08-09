@@ -129,16 +129,17 @@ let expose = {};
 
   // node
   function mk_block_inspect() {
-    var util = require("util");
-    return (
-      "Markdown.mk_block( " +
-      util.inspect(this.toString()) +
-      ", " +
-      util.inspect(this.trailing) +
-      ", " +
-      util.inspect(this.lineNumber) +
-      " )"
-    );
+    throw new Error('not implemented')
+    // var util = require("util");
+    // return (
+    //   "Markdown.mk_block( " +
+    //   util.inspect(this.toString()) +
+    //   ", " +
+    //   util.inspect(this.trailing) +
+    //   ", " +
+    //   util.inspect(this.lineNumber) +
+    //   " )"
+    // );
   }
 
   var mk_block = (Markdown.mk_block = function (block, trail, line) {

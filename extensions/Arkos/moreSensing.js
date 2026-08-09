@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-underscore-dangle */
 
-import Color from '../utils/color.js';
+import Color from '../../utils/color.js';
 // import Cast from '../utils/Cast.js';
 
 const { Cast, ArgumentType, BlockType } = window.Scratch;

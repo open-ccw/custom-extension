@@ -1,4 +1,4 @@
-import Cast from '../utils/cast.js'
+import Cast from '../../utils/cast.js'
 
 class StrictEqualityExtension {
   constructor(runtime) {

@@ -1,4 +1,4 @@
-import Cast from '../utils/cast.js'
+import Cast from '../../utils/cast.js'
 //import cover from './assets/cover2.png'
 //import icon from './assets/icon2.svg'
 

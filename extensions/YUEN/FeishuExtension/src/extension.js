@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Cast from '../../../utils/cast';
+import Cast from '../../../../utils/cast';
 import Icon from './assets/icon.png';
 import { extensionId } from './constants';
 
