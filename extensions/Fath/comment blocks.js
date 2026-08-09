@@ -67,6 +67,7 @@ class CommentBlocks {
               defaultValue: 'comment',
             },
           },
+          noScope:true,
         },
         {
           opcode: 'commentReporter',
