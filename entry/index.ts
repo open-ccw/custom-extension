@@ -1,3 +1,4 @@
+import { esm } from "./factory";
 const entries = {
   teaching: {
     info: {
