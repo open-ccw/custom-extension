@@ -4646,3 +4646,9 @@ twgl.js/dist/5.x/twgl-full.module.js:
   Available via the MIT license.
   see: http://github.com/greggman/twgl.js for details *)
 */
+
+// 标记本文件为 ES 模块，使 TypeScript 能够将其作为模块导入。
+// 此文件是打包后的 IIFE 脚本（无 import/export），若不添加模块标记，
+// entry/index.ts 中 `await import(".../BetterQuake")` 会报 TS2306 "不是模块"。
+// 运行时行为不变：IIFE 仍会自注册扩展。
+export {};

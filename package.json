@@ -1,11 +1,9 @@
 {
-  "name": "custom-extension",
-  "version": "1.0.0",
+  "name": "@open-ccw/custom-extension",
+  "version": "0.0.0",
   "description": "Custom extension repository for Gandi IDE.",
-  "main": "index.js",
-  "directories": {
-    "example": "example"
-  },
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "check-format": "prettier . --check",
@@ -13,8 +11,12 @@
     "lint": "eslint . --max-warnings=0",
     "prepare": "husky",
     "lint:fix": "eslint . --fix",
-    "build": "node ./build.mjs"
+    "build": "node ./build.mjs",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
