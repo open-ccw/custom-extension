@@ -1170,7 +1170,10 @@ const entries = {
     },
   },
   "wtkzq.complex": {
-    Extension: async () => await import("../extensions/wtkzq/complex/Complex"),
+    Extension: async () => {
+      await import("../extensions/wtkzq/complex/Complex");
+      return esm();
+    },
     info: {
       name: "complex.name",
       description: "complex.description",
@@ -1239,7 +1242,10 @@ const entries = {
     },
   },
   WitCatInterpreter: {
-    Extension: async () => await import("../extensions/wit_cat/Interpreter/Interpreter"),
+    Extension: async () => {
+      await import("../extensions/wit_cat/Interpreter/Interpreter");
+      return esm();
+    },
     info: {
       name: "WitCatInterpreter.name",
       description: "WitCatInterpreter.descp",
@@ -1271,7 +1277,10 @@ const entries = {
     },
   },
   kukemcWebhooks: {
-    Extension: async () => await import("../extensions/kukemc/WebHook/index"),
+    Extension: async () => {
+      await import("../extensions/kukemc/WebHook/index");
+      return esm();
+    },
     info: {
       name: "kukemcWebhook.name",
       description: "kukemcWebhook.description",
@@ -1313,7 +1322,10 @@ const entries = {
     },
   },
   betterquake: {
-    Extension: async () => await import("../extensions/QuakeStudio/BetterQuake/BetterQuake"),
+    Extension: async () => {
+      await import("../extensions/QuakeStudio/BetterQuake/BetterQuake");
+      return esm();
+    },
     info: {
       name: "BetterQuake.extensionName",
       description: "BetterQuake.description",
@@ -2850,7 +2862,10 @@ const entries = {
     },
   },
   arkosExtensions: {
-    Extension: async () => await import("../extensions/Arkos/arkosExtension"),
+    Extension: async () => {
+      await import("../extensions/Arkos/arkosExtension");
+      return esm();
+    },
     info: {
       name: "ArkosExt.extensionName",
       description: "ArkosExt.description",

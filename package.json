@@ -1,6 +1,6 @@
 {
   "name": "@open-ccw/custom-extension",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Custom extension repository for Gandi IDE.",
   "main": "dist/index.js",
   "type": "module",
