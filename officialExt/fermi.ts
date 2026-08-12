@@ -345,3 +345,5 @@ export default class GandiFermiExt {
     }
   }
 }
+
+export const __esModule = true;
