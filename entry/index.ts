@@ -2846,6 +2846,10 @@ const entries = {
     },
   },
   WitCatFPS: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/FPS");
+      return esm();
+    },
     info: {
       name: "WitCatFPS.name",
       description: "WitCatFPS.desc",
