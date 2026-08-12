@@ -1117,6 +1117,10 @@ const entries = {
     },
   },
   rxfs: {
+    Extension: async () => {
+      await import("../extensions/DilemmaGX/rxfs/rxFS");
+      return esm();
+    },
     info: {
       name: "rxFS",
       description: "description",
@@ -1147,6 +1151,10 @@ const entries = {
     },
   },
   cocreaFetch: {
+    Extension: async () => {
+      await import("../extensions/Fath/CocreaFetch");
+      return esm();
+    },
     info: {
       name: "cocreaFetch.extensionName",
       description: "cocreaFetch.description",
@@ -1427,6 +1435,10 @@ const entries = {
     },
   },
   Project0832: {
+    Extension: async () => {
+      await import("../extensions/Project/Project");
+      return esm();
+    },
     info: {
       name: "Project0832.Project0832.Project0832",
       description: "Project0832.Project0832.description",
@@ -1455,6 +1467,10 @@ const entries = {
     },
   },
   xeltallivclipblend: {
+    Extension: async () => {
+      await import("../extensions/PortFromTurboWarp/Vadik1/clippingblending");
+      return esm();
+    },
     info: {
       name: "xeltallivclipblend.extensionName",
       description: "xeltallivclipblend.description",
@@ -1490,6 +1506,10 @@ const entries = {
     },
   },
   stretch: {
+    Extension: async () => {
+      await import("../extensions/PortFromTurboWarp/stretch");
+      return esm();
+    },
     info: {
       name: "stretch.extensionName",
       description: "stretch.description",
@@ -1524,6 +1544,10 @@ const entries = {
     },
   },
   nonameawacomparisons: {
+    Extension: async () => {
+      await import("../extensions/PortFromTurboWarp/NOname-awa/Morecomparison");
+      return esm();
+    },
     info: {
       name: "comparison.extensionName",
       description: "comparison.description",
@@ -1656,6 +1680,10 @@ const entries = {
     },
   },
   KukeMCI18n: {
+    Extension: async () => {
+      await import("../extensions/kukemc/I18n/index");
+      return esm();
+    },
     info: {
       name: "kukeMCI18n.name",
       description: "kukeMCI18n.description",
@@ -1774,6 +1802,10 @@ const entries = {
     },
   },
   "FurryR.NotJS": {
+    Extension: async () => {
+      await import("../extensions/FurryR/not.js");
+      return esm();
+    },
     onlyVisibleOnShortcut: true,
     info: {
       name: "notjs.extensionName",
@@ -1802,6 +1834,10 @@ const entries = {
     },
   },
   lpp: {
+    Extension: async () => {
+      await import("../extensions/FurryR/lpp");
+      return esm();
+    },
     onlyVisibleOnShortcut: true,
     info: {
       name: "lpp.name",
@@ -2009,6 +2045,10 @@ const entries = {
     },
   },
   "DilemmaGX.3dm": {
+    Extension: async () => {
+      await import("../extensions/DilemmaGX/3DMath/Three");
+      return esm();
+    },
     info: {
       name: "Three.extensionName",
       description: "Three.description",
@@ -2117,6 +2157,10 @@ const entries = {
     },
   },
   skyhigh173BigInt: {
+    Extension: async () => {
+      await import("../extensions/Fath/Turbowarp/BigInt");
+      return esm();
+    },
     info: {
       name: "BigInt.extensionName",
       description: "BigInt.description",
@@ -2148,6 +2192,10 @@ const entries = {
     },
   },
   lmscomments: {
+    Extension: async () => {
+      await import("../extensions/Fath/comment blocks");
+      return esm();
+    },
     info: {
       name: "CmntExt.extensionName",
       description: "CmntExt.description",
@@ -2182,6 +2230,10 @@ const entries = {
     },
   },
   "nights.stats": {
+    Extension: async () => {
+      await import("../extensions/Nights/stats.js/src/main");
+      return esm();
+    },
     info: {
       name: "nights.stats.name",
       description: "nights.stats.descp",
@@ -2284,6 +2336,10 @@ const entries = {
     },
   },
   scratchhub: {
+    Extension: async () => {
+      await import("../extensions/Fath/ScratchHub");
+      return esm();
+    },
     info: {
       name: "sh.extensionName",
       description: "sh.description",
@@ -2316,6 +2372,10 @@ const entries = {
     },
   },
   "witCat.dollyPro": {
+    Extension: async () => {
+      await import("../extensions/DollyPro/dollytest");
+      return esm();
+    },
     info: {
       name: "witCat.dollyPro.extensionName",
       description: "witCat.dollyPro.description",
@@ -2361,6 +2421,10 @@ const entries = {
     },
   },
   shikiScopeVar: {
+    Extension: async () => {
+      await import("../extensions/SimonShiki/scopeVar");
+      return esm();
+    },
     info: {
       name: "shikiScopeVar.extensionName",
       description: "shikiScopeVar.description",
@@ -2402,6 +2466,10 @@ const entries = {
     },
   },
   Animator: {
+    Extension: async () => {
+      await import("../extensions/DilemmaGX/Animator/Animator");
+      return esm();
+    },
     info: {
       name: "Ani.extensionName",
       description: "Ani.description",
@@ -2553,6 +2621,10 @@ const entries = {
     },
   },
   Biter: {
+    Extension: async () => {
+      await import("../extensions/x10clkz/Biter");
+      return esm();
+    },
     info: {
       name: "Biter.name",
       description: "Biter.descp",
@@ -2973,6 +3045,10 @@ const entries = {
     },
   },
   RegExpVI: {
+    Extension: async () => {
+      await import("../extensions/six-6/regexp");
+      return esm();
+    },
     onlyVisibleOnShortcut: false,
     info: {
       name: "RegExpVI.name",
@@ -3010,6 +3086,10 @@ const entries = {
     },
   },
   VIDateTime: {
+    Extension: async () => {
+      await import("../extensions/six-6/datetime");
+      return esm();
+    },
     onlyVisibleOnShortcut: false,
     info: {
       name: "VIDateTime.name",
@@ -3044,6 +3124,30 @@ const entries = {
         "VIDateTime.name": "Date and Time Calculator v1.1",
         "VIDateTime.desc": "All about date time calculation",
         "VIDateTime.doc": "https://getgandi.com/extensions/date-and-time-calculator",
+      },
+    },
+  },
+  DannyDevNet: {
+    Extension: async () => {
+      await import("../extensions/dannydev/scCOM");
+      return esm();
+    },
+    info: {
+      name: "DannyDevCOM.extensionName",
+      description: "DannyDevCOM.description",
+      extensionId: "DannyDevNet",
+      featured: true,
+      disabled: false,
+      tags: ["developer"],
+    },
+    l10n: {
+      "zh-cn": {
+        "DannyDevCOM.extensionName": "AUSの通讯模块",
+        "DannyDevCOM.description": "基于 Http / WebSocket / Socket 的通讯与数据处理扩展",
+      },
+      en: {
+        "DannyDevCOM.extensionName": "AUS's Communication",
+        "DannyDevCOM.description": "Communication & data processing extension based on Http / WebSocket / Socket",
       },
     },
   },

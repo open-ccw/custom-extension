@@ -952,4 +952,7 @@ window.tempExt = {
   }
 };
 
+// 标记本文件为 ES 模块（否则 entry/index.ts 的 import 会报 TS2306 "不是模块"）
+export {}
+
 /* vim: set expandtab tabstop=2 shiftwidth=2: */

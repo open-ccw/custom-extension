@@ -1357,3 +1357,8 @@ window.tempExt = {
         },
     },
 }
+
+// 标记本文件为 ES 模块，使 TypeScript 能够将其作为模块导入。
+// 此文件是普通脚本（无 import/export），否则 entry/index.ts 中
+// `await import(".../scCOM")` 会报 TS2306 "不是模块"。
+export {}
