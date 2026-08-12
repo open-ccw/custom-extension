@@ -1724,6 +1724,9 @@ const entries = {
     },
   },
   nightstilemap: {
+    Extension: async () => {
+      await import("../extensions/Nights/tilemap/tilemap");
+    },
     info: {
       name: "nights.tilemap.name",
       description: "nights.tilemap.descp",
@@ -1943,6 +1946,9 @@ const entries = {
     },
   },
   "sipc.ink.Recording": {
+    Extension: async () => {
+      await import("../extensions/sipc.ink/Recording/Recording");
+    },
     info: {
       name: "Recording.name",
       description: "Recording.Description",
@@ -2557,6 +2563,9 @@ const entries = {
     },
   },
   "sipc.ink.CloudMusic": {
+    Extension: async () => {
+      await import("../extensions/sipc.ink/CloudMusic/CloudMusic");
+    },
     info: {
       name: "CloudMusic.name",
       description: "CloudMusic.Description",
@@ -2589,6 +2598,9 @@ const entries = {
     },
   },
   Consoles: {
+    Extension: async () => {
+      await import("../extensions/sipc.ink/Consoles/Consoles");
+    },
     info: {
       name: "Consoles.Name",
       description: "Consoles.Description",
