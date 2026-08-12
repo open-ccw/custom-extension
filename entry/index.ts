@@ -1090,6 +1090,9 @@ const entries = {
     },
   },
   GandiFermi: {
+    Extension: async () => {
+      return await import("../officialExt/fermi.ts");
+    },
     info: {
       name: "GandiFermi.extensionName",
       description: "GandiFermi.description",
