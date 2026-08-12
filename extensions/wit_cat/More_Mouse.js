@@ -1807,3 +1807,5 @@ function resizeElementInParent(element, type, types, aspectRatio) {
 		}
 	}
 }
+
+export {}

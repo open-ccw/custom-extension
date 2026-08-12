@@ -1398,6 +1398,10 @@ const entries = {
     },
   },
   WitCatZip: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/Zip/index");
+      return esm();
+    },
     info: {
       name: "WitCatZip.name",
       description: "WitCatZip.descp",
@@ -1551,6 +1555,10 @@ const entries = {
     },
   },
   WitCatMarkDowns: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/MarkDown/index");
+      return esm();
+    },
     info: {
       name: "WitCatMarkDown.name",
       description: "WitCatMarkDown.descp",
@@ -1587,6 +1595,10 @@ const entries = {
     },
   },
   WitCatGamePad: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/GamePad");
+      return esm();
+    },
     info: {
       name: "WitCatGamePad.name",
       description: "WitCatGamePad.descp",
@@ -1857,6 +1869,10 @@ const entries = {
     },
   },
   moreSensing: {
+    Extension: async () => {
+      await import("../extensions/Arkos/moreSensing");
+      return esm();
+    },
     info: {
       name: "moreSensing.extensionName",
       description: "moreSensing.description",
@@ -1921,6 +1937,10 @@ const entries = {
     },
   },
   qxsckmatrix: {
+    Extension: async () => {
+      await import("../extensions/qxsck/matrix");
+      return esm();
+    },
     info: {
       name: "qxsckmatrix.name",
       description: "qxsckmatrix.description",
@@ -1953,6 +1973,10 @@ const entries = {
     },
   },
   qxsckvarandlist: {
+    Extension: async () => {
+      await import("../extensions/qxsck/var-and-list");
+      return esm();
+    },
     info: {
       name: "qxsckvarandlist.name",
       description: "qxsckvarandlist.description",
@@ -2021,6 +2045,10 @@ const entries = {
     },
   },
   advancedControls: {
+    Extension: async () => {
+      await import("../extensions/Arkos/advancedControls");
+      return esm();
+    },
     info: {
       name: "AdvancedControls.extensionName",
       description: "AdvancedControls.description",
@@ -2053,6 +2081,10 @@ const entries = {
     },
   },
   qxsckeasystruct: {
+    Extension: async () => {
+      await import("../extensions/qxsck/easy-struct");
+      return esm();
+    },
     info: {
       name: "qxsckeasystruct.name",
       description: "qxsckeasystruct.description",
@@ -2182,6 +2214,10 @@ const entries = {
     },
   },
   moreDataTypes: {
+    Extension: async () => {
+      await import("../extensions/Arkos/moreDataTypes/moreDataTypes");
+      return esm();
+    },
     info: {
       name: "moreDataTypes.extensionName",
       description: "moreDataTypes.description",
@@ -2417,6 +2453,10 @@ const entries = {
     },
   },
   qxsckdataanalysis: {
+    Extension: async () => {
+      await import("../extensions/qxsck/data-analysis");
+      return esm();
+    },
     info: {
       name: "qxsck.name",
       description: "qxsck.description",
@@ -2548,6 +2588,10 @@ const entries = {
     },
   },
   strmani: {
+    Extension: async () => {
+      await import("../extensions/qxsck/str-mani");
+      return esm();
+    },
     info: {
       name: "strmani.name",
       description: "strmani.description",
@@ -2583,6 +2627,10 @@ const entries = {
     },
   },
   WitCatBBcode: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/BBcode/index");
+      return esm();
+    },
     info: {
       name: "WitCatBBcode.name",
       description: "WitCatBBcode.descp",
@@ -2615,6 +2663,10 @@ const entries = {
     },
   },
   WitCatIndexedDB: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/IndexedDB");
+      return esm();
+    },
     info: {
       name: "WitCatIndexedDB.name",
       description: "WitCatIndexedDB.descp",
@@ -2750,6 +2802,10 @@ const entries = {
     },
   },
   WitCatMouse: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/More_Mouse");
+      return esm();
+    },
     info: {
       name: "WitCatMouse.name",
       description: "WitCatMouse.desc",
@@ -2779,6 +2835,10 @@ const entries = {
     },
   },
   WitCatInput: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/Input");
+      return esm();
+    },
     info: {
       name: "WitCatInput.name",
       description: "WitCatInput.desc",
@@ -2807,6 +2867,10 @@ const entries = {
     },
   },
   WitCatFileHelper: {
+    Extension: async () => {
+      await import("../extensions/wit_cat/File_Helper/File_Helper");
+      return esm();
+    },
     info: {
       name: "WitCatFileHelper.name",
       description: "WitCatFileHelper.description",
@@ -2835,6 +2899,10 @@ const entries = {
     },
   },
   ArkosArchiveCode: {
+    Extension: async () => {
+      await import("../extensions/Arkos/Archivecode");
+      return esm();
+    },
     info: {
       name: "ArchiveCodeExt.extensionName",
       description: "ArchiveCodeExt.description",

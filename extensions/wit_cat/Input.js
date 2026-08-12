@@ -1123,7 +1123,7 @@ class WitCatInput {
     if (this.inputParent() === null) {
       return;
     }
-    Array.from(document.querySelectorAll('.WitCatInput')).forEach((element) => element.remove());
+    Array.from(document.querySelectorAll(".WitCatInput")).forEach((element) => element.remove());
     this.InputListen = [];
   }
 
@@ -1745,3 +1745,5 @@ window.tempExt = {
     },
   },
 };
+
+export {};

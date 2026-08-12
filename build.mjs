@@ -10,4 +10,5 @@ await esbuild.build({
   },
   minify: true,
   format: "esm",
+  splitting: true,
 });
