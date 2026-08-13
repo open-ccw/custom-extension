@@ -740,6 +740,9 @@ const patchSymbol = Symbol("patch");
 function initExpandableBlocks(extension, plusImage = rightArrow, minusImage = leftArrow) {
   // 创建按钮
   const { runtime } = extension;
+  if (runtime.isPlayerOnly) {
+    return;
+  }
   const Blockly = getScratchBlocks(runtime);
   const { PlusSelectButton, PlusButton, MinusButton } = createButtons(Blockly, plusImage, minusImage);
   proxyBlocklyBlocksObject(runtime);
@@ -790,7 +793,7 @@ function getDynamicArgs(args) {
   // }
 
   // 使用 hasOwnProperty 判断参数是否存在
-  for (const res = []; ; ) {
+  for (const res = []; ;) {
     const k = `DYNAMIC_ARGS${res.length + 1}`;
     if (!args.hasOwnProperty(k)) return res;
     res.push(args[k]);
