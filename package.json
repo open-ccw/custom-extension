@@ -1,6 +1,6 @@
 {
   "name": "@open-ccw/custom-extension",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Custom extension repository for Gandi IDE.",
   "main": "dist/index.js",
   "type": "module",
@@ -63,6 +63,7 @@
     "axios": "^1.19.0",
     "franc-min": "^6.2.0",
     "jszip": "^3.10.1",
-    "moment-timezone": "^0.6.3"
+    "moment-timezone": "^0.6.3",
+    "tweakpane": "^4.0.5"
   }
 }

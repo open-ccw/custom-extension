@@ -2313,6 +2313,7 @@ const entries = {
     },
   },
   "Cappu.panel": {
+    Extension: async () => await import("../officialExt/cappuPanel.ts"),
     info: {
       name: "Cappu.panel.extensionName",
       description: "Cappu.panel.description",
