@@ -23,7 +23,7 @@ patch 的目标就是把这类文件还原为项目约定的、规范的 class �
 - 扩展是一个 class，包含 `constructor(runtime)` 与 `getInfo()`，每个积木一个同名 class 方法。
 - 多语言通过 `runtime.getFormatMessage({...})` 或 `translate.setup({...})` 处理。
 - 默认导出该 class（`export default class XxxExt`）。
-- 添加适配extension manager的元数据`export const __esModule = true;`
+- 添加导出适配extension manager的元数据`export const __esModule = true;`
 
 ## 反编译产物 → 规范 class 的映射表
 

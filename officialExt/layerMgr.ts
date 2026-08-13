@@ -34,8 +34,14 @@ const messages: Record<string, [string, string]> = {
   onlySprites: ["仅角色", "only sprites"],
   spritesAndClones: ["角色和克隆体", "sprites and clones"],
   setTargetLayerLevel: ["将[TARGET]移到层级[LEVEL]", "move [TARGET] to the layer [LEVEL]"],
-  setTargetLayerPriority: ["将[TARGET]的层级内排序值设为[PRIORITY]", "set [TARGET] z-index in layer to[PRIORITY]"],
-  setCanvasLayerLevel: ["🖼️设置[TARGET]的高级画笔的层级[LEVEL]", "🖼️set [TARGET] canvas's layer to [LEVEL]"],
+  setTargetLayerPriority: [
+    "将[TARGET]的层级内排序值设为[PRIORITY]",
+    "set [TARGET] z-index in layer to[PRIORITY]",
+  ],
+  setCanvasLayerLevel: [
+    "🖼️设置[TARGET]的高级画笔的层级[LEVEL]",
+    "🖼️set [TARGET] canvas's layer to [LEVEL]",
+  ],
   setCanvasLayerPriority: [
     "🖼️将[TARGET]的高级画笔的图层排序值设为[PRIORITY]",
     "🖼️set [TARGET] canvas's z-index in layer to[PRIORITY]",
@@ -118,7 +124,9 @@ export default class LayerManagerExt {
   }
 
   getInfo() {
-    this.canvasExtensionDetected = this.runtime._blockInfo.find((e: any) => "CCWCanvasV2" === e.id);
+    this.canvasExtensionDetected = this.runtime._blockInfo.find(
+      (e: any) => "CCWCanvasV2" === e.id
+    );
 
     return {
       id: NS,
@@ -160,7 +168,9 @@ export default class LayerManagerExt {
             if (this._terminalShowed) {
               this.runtime.logSystem.show();
               this.runtime.logSystem.clear();
-              this.runtime.logSystem.info(`----------------${this.formatMessage("infoHeader")}----------------`);
+              this.runtime.logSystem.info(
+                `----------------${this.formatMessage("infoHeader")}----------------`
+              );
               this.__printFolderInGandiTerminal(this.rootFolder);
             } else {
               this.runtime.logSystem.hide();
@@ -409,7 +419,11 @@ export default class LayerManagerExt {
     const result: { text: string; value: string }[] = [];
     result.push({ text: this.formatMessage(r), value: "__myself__" });
     this.runtime.targets.forEach((target: any) => {
-      if (target.isOriginal && !target.isStage && target !== this.runtime._editingTarget) {
+      if (
+        target.isOriginal &&
+        !target.isStage &&
+        target !== this.runtime._editingTarget
+      ) {
         result.push({ text: target.sprite.name, value: target.sprite.name });
       }
     });
@@ -434,7 +448,9 @@ export default class LayerManagerExt {
     }
   }
 
-  getFolderAndSpriteName(e: string): { isSingleSprite: boolean; folderName?: string; spriteName?: string } {
+  getFolderAndSpriteName(
+    e: string
+  ): { isSingleSprite: boolean; folderName?: string; spriteName?: string } {
     const match = /^([^/]+)\/\/(.*)$/.exec(e);
     if (match) {
       return { isSingleSprite: false, folderName: match[1], spriteName: match[2] };
@@ -449,19 +465,19 @@ export default class LayerManagerExt {
     const layerManager = this.layerManager;
     const renderer = this.renderer;
 
-    this.tryHackedFunction(
-      this.runtime.ext_scratch3_looks,
-      "_positionBubble",
-      function (this: any, original: any, args: any) {
-        const bubbleDrawableId = this._getBubbleState(args).drawableId;
-        if (bubbleDrawableId) {
-          renderer.getDrawableLayerFolder(args.drawableID).add(bubbleDrawableId);
-          const order = renderer.getDrawableLayerIndex(args.drawableID) + 0.001 * layerManager.order;
-          renderer.setDrawableLayerIndex(bubbleDrawableId, order);
-        }
-        return original.call(this, args);
+    this.tryHackedFunction(this.runtime.ext_scratch3_looks, "_positionBubble", function (
+      this: any,
+      original: any,
+      args: any
+    ) {
+      const bubbleDrawableId = this._getBubbleState(args).drawableId;
+      if (bubbleDrawableId) {
+        renderer.getDrawableLayerFolder(args.drawableID).add(bubbleDrawableId);
+        const order = renderer.getDrawableLayerIndex(args.drawableID) + 0.001 * layerManager.order;
+        renderer.setDrawableLayerIndex(bubbleDrawableId, order);
       }
-    );
+      return original.call(this, args);
+    });
 
     const prototype = Object.getPrototypeOf(this.runtime.targets[0]);
 
@@ -477,7 +493,11 @@ export default class LayerManagerExt {
       return clone;
     });
 
-    this.tryHackedFunction(prototype, "goBehindOther", function (this: any, original: any, other: any) {
+    this.tryHackedFunction(prototype, "goBehindOther", function (
+      this: any,
+      original: any,
+      other: any
+    ) {
       const selfIndex = renderer.getDrawableLayerIndex(this.drawableID);
       const otherIndex = renderer.getDrawableLayerIndex(other.drawableID);
       original.call(this, other);
@@ -493,14 +513,20 @@ export default class LayerManagerExt {
 
     const items = [...e.items]
       .reverse()
-      .map((item: any) => (typeof item === "object" ? item : this.runtime.getTargetByDrawableId(item)))
+      .map((item: any) =>
+        typeof item === "object" ? item : this.runtime.getTargetByDrawableId(item)
+      )
       .filter((item: any) => item && item.isOriginal !== false);
 
     items.forEach((item: any, i: number) => {
       const prefix = a + r + (i === items.length - 1 ? "└" : "├");
       if (item.isOriginal !== true) {
         logSystem.info(`${prefix}\u001b[0;93m📁  ${item.name}\u001b[0m`);
-        this.__printFolderInGandiTerminal(item, `${r} `, i === items.length - 1 ? " " : "│");
+        this.__printFolderInGandiTerminal(
+          item,
+          `${r} `,
+          i === items.length - 1 ? " " : "│"
+        );
       } else {
         const name = item.sprite.name;
         const layerIndex = this.renderer.getDrawableLayerIndex(item.drawableID);
@@ -554,7 +580,7 @@ export default class LayerManagerExt {
     const defaultFolder = folders[defaultIndex];
     this.layerManager.defaultFolderDrawableAddTo = defaultFolder;
 
-    for (let s = 0; s < this.rootFolder.items.length;) {
+    for (let s = 0; s < this.rootFolder.items.length; ) {
       const item = this.rootFolder.items[s];
       if (typeof item === "object") {
         if (folders.includes(item)) {

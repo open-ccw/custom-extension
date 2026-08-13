@@ -168,6 +168,7 @@ const entries = {
     },
   },
   GandiKamera: {
+    Extension: async()=>await import("../officialExt/gandiKamera.ts"),
     info: {
       name: "GandiKamera.extensionName",
       description: "GandiKamera.description",

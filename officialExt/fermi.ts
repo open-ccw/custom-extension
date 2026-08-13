@@ -50,16 +50,16 @@ const NS = "GandiFermi";
 
 export default class GandiFermiExt {
   runtime: any;
-  fm: (e: { id: string; default: string; description: string }) => string;
+  _kv: (e: { id: string; default: string; description: string }) => string;
 
   constructor(t: any) {
     this.runtime = t;
 
-    const formatMessage = t.getFormatMessage({
+    const KV = t.getFormatMessage({
       "zh-cn": zh,
       en: en,
     });
-    this.fm = (e: { id: string; default: string; description: string }) => formatMessage(e);
+    this._kv = (e: { id: string; default: string; description: string }) => KV(e);
 
     const style = document.createElement("style");
     style.type = "text/css";
@@ -82,11 +82,11 @@ export default class GandiFermiExt {
    */
   formatMessage(id: string | Record<string, string>): string {
     if (typeof id === "string") {
-      return this.fm({ id, default: id, description: id });
+      return this._kv({ id, default: id, description: id });
     }
     const key = Object.keys(id)[0];
     const defaultValue = id[key];
-    return this.fm({ id: key, default: defaultValue, description: defaultValue });
+    return this._kv({ id: key, default: defaultValue, description: defaultValue });
   }
 
   getInfo() {
