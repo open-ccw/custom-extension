@@ -50,6 +50,7 @@ const entries = {
     },
   },
   layerManager: {
+    Extension: async () => await import("../officialExt/layerMgr.ts"),
     info: {
       name: "layerManager.extensionName",
       extensionId: "layerManager",
